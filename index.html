@@ -1,15 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+  <head>
 
-<h1 style=color:purple;>My First Heading</h1>
-<p><h1 style=color:DarkBlue;>My First Paragraph</h1></p>
-<p><h2 style=color:Blue;>My second paragraph.</h2></p>
-<p><h3 style=color:lightBlue;>My third parag>raph</h3></p>
-<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--UisO0ff0--%2Fc_scale%2Cf_auto%2Cfl_progressive%2Cq_80%2Cw_800%2Ftxthbfekk2a1garzhu0j.jpg&imgrefurl=https%3A%2F%2Fio9.gizmodo.com%2Fsome-body-once-told-me-that-shrek-is-getting-rebooted-1830252517&docid=V7dvScAyB0X-iM&tbnid=QbnMasdgZ4osOM%3A&vet=10ahUKEwibiPu_4sbkAhVpIDQIHU1zB3kQMwiFASgLMAs..i&w=800&h=450&safe=strict&bih=969&biw=1920&q=shrek&ved=0ahUKEwibiPu_4sbkAhVpIDQIHU1zB3kQMwiFASgLMAs&iact=mrc&uact=8" alt="Shrek" width="300px" height="300px">
+    <title>repl.it</title>
 
-</body>
-</html
+    <style>
+      .navbar{
+        background-color: cyan;
+        width: 100%;
+        height: 64px;
+      }
+
+      .navbar a{
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        padding:16px;
+        float:left;
+      }
+      
+      .morelinks{
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        padding:16px;
+        background-color:cyan;
+      }
+
+      .navbar a:hover, .morelinks:hover{
+        background-color: pink;
+      }
+
+      .dropdown:hover .dropdown-content{
+        display:block;
+      }
+
+      .dropdown-content{
+        position: absolute;
+        z-index: 1;
+        display:none;
+        background-color:cyan;
+      }
+      
+      .dropdown{
+        background-color:cyan;
+        color:white;
+        float: left;
+        text-decoration:none;
+        font-size:24px;
+    
+      }
+      
+      .dropdown-content a{
+          float:none;
+          display:block;
+          
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="https://www.yahoo.com">Yahoo</a>
+      <a href="https://www.google.com">Google</a>
+      <a href="https://www.wikipedia.com">Wiki</a>
+      <div class="dropdown">
+        <div class="morelinks">More Links</div>
+        <div class="dropdown-content">
+          <a href="https://aws.amazon.com > education > awseducate">AWS Educate</a>
+          <a href="https://www.collegeboard.org">College Board</a>
+          <a href="https://2048game.com">2048</a>
+        </div>
+      </div>  
+
+    </div>
+
+  </body>
+</html>
