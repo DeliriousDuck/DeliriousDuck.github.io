@@ -1,6 +1,6 @@
 .navbar{
             list-style:none;
-            background-color:cyan;
+            background-color:black;
             overflow:hidden;
             padding:0;
             
@@ -8,7 +8,7 @@
 
         .navbar a, .dropdown div{
             text-decoration:none;
-            color:black;
+            color:white;
             font-size:24px;
             padding:16px;
             display:inline-block;
@@ -31,7 +31,7 @@
             display:none;
             position:absolute;
             z-index:1;
-            background-color:cyan;
+            background-color:black;
             
         }
         
@@ -46,6 +46,6 @@
         }
         
         .active{
-            background-color:red;
+            background-color:blue;
         }
     
