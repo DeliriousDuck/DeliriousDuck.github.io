@@ -1,4 +1,4 @@
-.navbar{
+        .navbar{
             list-style:none;
             background-color:black;
             overflow:hidden;
@@ -47,5 +47,16 @@
         
         .active{
             background-color:blue;
+            
+        }
+        
+        .paragraph1{
+            font-size:12px;
+            
+        }
+        
+        h2{
+            text-align:center;
+            
         }
     
