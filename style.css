@@ -50,12 +50,18 @@
             
         }
         
-        .paragraph1{
+        .paragraphs{
             font-size:12px;
+            text-align:center;
             
         }
         
         h2{
+            text-align:center;
+            
+        }
+        
+        .picture{
             text-align:center;
             
         }
