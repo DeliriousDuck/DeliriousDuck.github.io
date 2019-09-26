@@ -3,7 +3,7 @@
             background-color:black;
             overflow:hidden;
             padding:0;
-            
+
         }
 
         .navbar a, .dropdown div{
@@ -12,19 +12,19 @@
             font-size:24px;
             padding:16px;
             display:inline-block;
-            
+
         }
 
         .navbar li{
             float:left;
-            
+
         }
-        
+
         .navbar li:hover{
             background-color:pink;
-            
+
         }
-        
+
         .dropdown-content{
             list-style:none;
             padding:0;
@@ -32,37 +32,40 @@
             position:absolute;
             z-index:1;
             background-color:black;
-            
+
         }
-        
+
         .dropdown-content li{
             float:none;
-           
+
         }
-        
+
         .dropdown:hover .dropdown-content{
             display:block;
-            
+
         }
-        
+
         .active{
             background-color:blue;
-            
+
         }
-        
+
         .paragraphs{
             font-size:12px;
             text-align:center;
-            
+
         }
-        
-        h2{
+
+        .header{
             text-align:center;
-            
+
         }
-        
+
         .picture{
             text-align:center;
-            
+
         }
-    
+
+        .heading{
+            text-decoration:underline;
+        }
