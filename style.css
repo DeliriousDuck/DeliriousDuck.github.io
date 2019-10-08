@@ -51,7 +51,7 @@
         }
 
         .paragraphs{
-            font-size:12px;
+            font-size:16px;
             text-align:center;
 
         }
@@ -70,7 +70,12 @@
             text-decoration:underline;
         }
 
-        .drphil{
-              background-image: url("download.png");
-
+        table, th, td {
+        border: .5px solid grey;
         }
+
+        td {
+            text-align: center;
+        }
+
+
