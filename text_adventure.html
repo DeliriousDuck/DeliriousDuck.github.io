@@ -4,7 +4,35 @@
 <head>
 <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #container{
+            position: absolute;
+            top: 75px;
+            bottom: 4px;
+            left: 8px;
+            right: 8px;
+            background-color: green;
 
+        }
+
+        #leftpane{
+            width: 56%;
+            height: 100%;
+            float: left;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            background-color: red;
+        }
+
+        #rightpane{
+            width: 44%;
+            height: 100%;
+            float: left;
+            background-color: blue;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -26,7 +54,13 @@
 
         </ul>
 
-        <h1>Text Adventure</h1>
+        <div id="container">
+            <div id="leftpane">
+            </div>
+
+            <div id="rightpane">
+            </div>
+        </div>
 
 </body>
 </html>
