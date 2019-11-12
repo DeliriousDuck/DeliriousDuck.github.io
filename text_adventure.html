@@ -4,35 +4,7 @@
 <head>
 <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        #container{
-            position: absolute;
-            top: 75px;
-            bottom: 4px;
-            left: 8px;
-            right: 8px;
-            background-color: green;
-
-        }
-
-        #leftpane{
-            width: 56%;
-            height: 100%;
-            float: left;
-            display:flex;
-            align-items:center;
-            justify-content: center;
-            background-color: red;
-        }
-
-        #rightpane{
-            width: 44%;
-            height: 80%;
-            float: left;
-            background-color: blue;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
 </head>
 
 <body>
@@ -40,17 +12,16 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutme.html">About Me</a></li>
             <li><a href="resume.html">Resume</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
             <li class="dropdown">
-                <div class="active">Projects</div>
+                <div>Projects</div>
                 <ul class="dropdown-content">
-                    <li><a href="text_adventure.html">Text Adventure</a></li>
+                    <li class= "active"><a href="text_adventure.html">Text Adventure</a></li>
                     <li><a href="project2.html">Project 2</a></li>
                     <li><a href="project3.html">Project 3</a></li>
                 </ul>
 
             </li>
-
-            <li><a href="contactme.html">Contact Me</a></li>
 
         </ul>
 
@@ -61,6 +32,26 @@
             <div id="rightpane">
             </div>
         </div>
+
+        <div id= "container">
+            <div id="leftpane">
+            <div id="rightpane">
+                <div id="story-text">
+                <p id="p-text1"></p>
+                <p id="p-text2"></p>
+                <p id="p-text3"></p>
+                <p id="p-text4"></p>
+            </div>
+            <div id="choices">
+                <a id="b1" href="#">1</a>
+                <a id="b2" href="#">2</a>
+                <a id="b3" href="#">3</a>
+                <a id="b4" href="#">4</a>
+            </div>
+        </div>
+
+    </div>
+
 
 </body>
 </html>
