@@ -32,15 +32,25 @@
             <div id="rightpane">
             </div>
         </div>
-
+        // for perfect height and width use height=450 and width=410
         <div id= "container">
             <div id="leftpane">
+                <img id="storyimg" src="images/clean_man.png" height="402px" width="400px">
+            </div>
             <div id="rightpane">
                 <div id="story-text">
-                <p id="p-text1"></p>
-                <p id="p-text2"></p>
-                <p id="p-text3"></p>
-                <p id="p-text4"></p>
+                <p id="ptext1">
+                    jfghadkfhjh
+                </p>
+                <p id="ptext2">
+                    djfdfkjdj
+                </p>
+                <p id="ptext3">
+                    dbfbdfb
+                </p>
+                <p id="ptext4">
+                md.kmf.mf
+                </p>
             </div>
             <div id="choices">
                 <a id="b1" href="#">1</a>
@@ -53,5 +63,34 @@
     </div>
 
 
+<script>
+    var pic = document.getElementById("storyimg");
+    var ptext1 = document.getElementById("ptext1");
+    var ptext2 = document.getElementById("ptext2");
+    var ptext3 = document.getElementById("ptext3");
+    var ptext4 = document.getElementById("ptext4");
+    var b1 = document.getElementById("b1");
+    var b2 = document.getElementById("b2");
+    var b3 = document.getElementById("b3");
+    var b4 = document.getElementById("b4");
+    var state = "intro";
+
+    function intro(){
+        pic.src = "images/krustykrab.png";
+        ptext1.innerHTML("This is the intro to my story");
+        ptext2.innerHTML("");
+        ptext3.innerHTML("");
+        ptext4.innerHTML("");
+        b1.innerHTMl("yes");
+        b2.innerHTMl("yes");
+        b3.innerHTMl("yes");
+        b4.innerHTMl("yes");
+        b1.style.display = "block";
+        b1.style.display = "block";
+        b1.style.display = "block";
+        b1.style.display = "none";
+    }
+
+</script>
 </body>
 </html>

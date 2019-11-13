@@ -12,13 +12,11 @@
 
 #storytext{
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     top: 0px;
     left: 56%;
     right: 0px;
     justify-content: center;
-    background-color: pink;
-    background-content:;
     padding: 8px;
 
 }
@@ -29,7 +27,7 @@
     bottom: 4px;
     left: 8px;
     right: 8px;
-    background-color: pink;
+    background-color: black;
 
 }
 
@@ -40,13 +38,15 @@
     display:flex;
     align-items:center;
     justify-content: center;
-    background-color: red;
+    background-color: ;
 }
 
 #rightpane{
-    width: 44%;
+    width: 40%;
     height: 100%;
-    float: left;
+    float: right;
+    align-items:center;
+    display:flex;
     background-color:;
 }
 
@@ -59,6 +59,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: yellow;
+    background-color: ;
 
+}
+
+#ptext1, #ptext2, #ptext3, #ptext4{
+    color: white;
+
+}
+
+//#storyimg{
+    max-height:80%;
+    max-width: 97%;
+    width: 97%;
 }
