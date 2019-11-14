@@ -27,7 +27,7 @@
     bottom: 4px;
     left: 8px;
     right: 8px;
-    background-color: black;
+    background-color: lightseagreen;
 
 }
 
@@ -68,8 +68,8 @@
 
 }
 
-//#storyimg{
-    max-height:80%;
+#storyimg{
+    max-height:97%;
     max-width: 97%;
     width: 97%;
 }

@@ -35,28 +35,28 @@
         // for perfect height and width use height=450 and width=410
         <div id= "container">
             <div id="leftpane">
-                <img id="storyimg" src="images/clean_man.png" height="402px" width="400px">
+                <img id="storyimg" src="images/clean_man.png">
             </div>
             <div id="rightpane">
                 <div id="story-text">
                 <p id="ptext1">
-                    jfghadkfhjh
+                    You are a dull child named Fry Guy that never did well in school, but always had a passion for cooking. You decide that school is not important and you should drop out and pursue your passion of becoming a master chef. You get a job at The Burger Place in order to learn the basics of working with others in a restaurant setting.
                 </p>
                 <p id="ptext2">
-                    djfdfkjdj
+                    You love your job at The Burger Place and you realize that it is not your dream to become a master chef, but a manager at the fast food restaurant. Currently you are only a lowly fry cook who only needs to make a few batches of fries a day. When you are making fries you are usually idle at the fry machine in the back of the restaurant waiting for them to cook.
                 </p>
                 <p id="ptext3">
-                    dbfbdfb
+                    You get to talk to the other chefs who are at their stations across the way from the fry machine. On occasion, you have the opportunity to take people’s orders at the cash register that faces the ‘dining’ area. The time you spend not cooking fries is spent cleaning up messes in the dining area where the customers eat their meals.
                 </p>
                 <p id="ptext4">
-                md.kmf.mf
+                    After getting your job you begin working your way up the ladder in hopes of one day becoming a manager.
                 </p>
             </div>
             <div id="choices">
-                <a id="b1" href="#">1</a>
-                <a id="b2" href="#">2</a>
-                <a id="b3" href="#">3</a>
-                <a id="b4" href="#">4</a>
+                <a id="b1" onclick="bclick(1)" href="#">1</a>
+                <a id="b2" onclick="bclick(2)" href="#">2</a>
+                <a id="b3" onclick="bclick(3)" href="#">3</a>
+                <a id="b4" onclick="bclick(4)" href="#">4</a>
             </div>
         </div>
 
@@ -74,21 +74,56 @@
     var b3 = document.getElementById("b3");
     var b4 = document.getElementById("b4");
     var state = "intro";
+    intro();
 
     function intro(){
         pic.src = "images/krustykrab.png";
-        ptext1.innerHTML("This is the intro to my story");
-        ptext2.innerHTML("");
-        ptext3.innerHTML("");
-        ptext4.innerHTML("");
-        b1.innerHTMl("yes");
-        b2.innerHTMl("yes");
-        b3.innerHTMl("yes");
-        b4.innerHTMl("yes");
+        ptext1.innerHTML = "You are a dull child named Fry Guy that never did well in school, but always had a passion for cooking. You decide that school is not important and you should drop out and pursue your passion of becoming a master chef. You get a job at The Burger Place in order to learn the basics of working with others in a restaurant setting.";
+        ptext2.innerHTML = "You love your job at The Burger Place and you realize that it is not your dream to become a master chef, but a manager at the fast food restaurant. Currently you are only a lowly fry cook who only needs to make a few batches of fries a day. When you are making fries you are usually idle at the fry machine in the back of the restaurant waiting for them to cook.";
+        ptext3.innerHTML = "You get to talk to the other chefs who are at their stations across the way from the fry machine. On occasion, you have the opportunity to take people’s orders at the cash register that faces the ‘dining’ area. The time you spend not cooking fries is spent cleaning up messes in the dining area where the customers eat their meals.";
+        ptext4.innerHTML = "After getting your job you begin working your way up the ladder in hopes of one day becoming a manager.";
+        b1.innerHTMl = "Continue";
+        b2.innerHTMl = "";
+        b3.innerHTMl = "";
+        b4.innerHTMl = "";
         b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+        state="spillDrink";
+    }
+
+    function spillDrink(){
+         pic.src = "images/krustykrab.png";
+        ptext1.innerHTML = "Hello, I have put a spell on you.";
+        ptext2.innerHTML = "What would you like to do?";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTMl = "Attack";
+        b2.innerHTM = "Run";
+        b3.innerHTMl = "Stay";
+        b4.innerHTMl = "yes";
         b1.style.display = "block";
-        b1.style.display = "block";
-        b1.style.display = "none";
+        b2.style.display = "block";
+        b3.style.display = "block";
+        b4.style.display = "none";
+        state="spillDrink";
+    }
+
+    //state Machine
+    function bclick(button){
+        if(state == "intro"){
+            if(button == 1){
+                spillDrink();
+            }
+            else if(button == 2){
+                //Send them somewhere else
+            }
+            else if(button ==3){
+                //Send them somewhere else
+            }
+        }
+        return false;
     }
 
 </script>
