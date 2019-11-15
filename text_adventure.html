@@ -82,27 +82,23 @@
         ptext2.innerHTML = "You love your job at The Burger Place and you realize that it is not your dream to become a master chef, but a manager at the fast food restaurant. Currently you are only a lowly fry cook who only needs to make a few batches of fries a day. When you are making fries you are usually idle at the fry machine in the back of the restaurant waiting for them to cook.";
         ptext3.innerHTML = "You get to talk to the other chefs who are at their stations across the way from the fry machine. On occasion, you have the opportunity to take people’s orders at the cash register that faces the ‘dining’ area. The time you spend not cooking fries is spent cleaning up messes in the dining area where the customers eat their meals.";
         ptext4.innerHTML = "After getting your job you begin working your way up the ladder in hopes of one day becoming a manager.";
-        b1.innerHTMl = "Continue";
-        b2.innerHTMl = "";
-        b3.innerHTMl = "";
-        b4.innerHTMl = "";
+        b1.innerHTML = "Continue";
         b1.style.display = "block";
         b2.style.display = "none";
         b3.style.display = "none";
         b4.style.display = "none";
-        state="spillDrink";
     }
 
     function spillDrink(){
-         pic.src = "images/krustykrab.png";
-        ptext1.innerHTML = "Hello, I have put a spell on you.";
-        ptext2.innerHTML = "What would you like to do?";
+        pic.src = "images/clean_man.png";
+        ptext1.innerHTML = "You began your job as an employee of The Burger Place! On the first day of the job a customer has spilled a drink";
+        ptext2.innerHTML = "";
         ptext3.innerHTML = "";
-        ptext4.innerHTML = "";
-        b1.innerHTMl = "Attack";
-        b2.innerHTM = "Run";
-        b3.innerHTMl = "Stay";
-        b4.innerHTMl = "yes";
+        ptext4.innerHTML = "What would you do?";
+        b1.innerHTML = "Mop Spill Yourself";
+        b2.innerHTML = "Ask Somebody Else";
+        b3.innerHTML = "Tell Cowroker To Clean";
+        b4.innerHTML = "Pretend You Didnt See";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "block";
@@ -110,11 +106,27 @@
         state="spillDrink";
     }
 
+    function mopSpillYourself(){
+        pic.src = "images/clean_man.png";
+        ptext1.innerHTML = "Your manager notices and thanks you for cleaning.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Continue";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+        state = "mopSpillYourself"
+
+    }
+
     //state Machine
     function bclick(button){
         if(state == "intro"){
             if(button == 1){
                 spillDrink();
+                state = "spillDrink";
             }
             else if(button == 2){
                 //Send them somewhere else
@@ -122,6 +134,24 @@
             else if(button ==3){
                 //Send them somewhere else
             }
+        }
+        else if(state == "spillDrink"){
+            if(button == 1){
+                //Mop Spill Yourself
+                mopSpillYourself();
+                state = "mopSpillYourself";
+        }
+            else if(button == 2){
+                //Ask Somebody Else
+
+        }
+            else if(button == 3){
+                //Tell Coworker To Clean
+
+        }
+            else if(button == 4){
+                //Pretend You Didn't See It
+
         }
         return false;
     }
