@@ -91,20 +91,20 @@
 
     function spillDrink(){
         pic.src = "images/clean_man.png";
-        ptext1.innerHTML = "You began your job as an employee of The Burger Place! On the first day of the job a customer has spilled a drink";
+        ptext1.innerHTML = "You began your job as an employee of The Burger Place! On the first day of the job a customer has spilled a drink.";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "What would you do?";
         b1.innerHTML = "Mop Spill Yourself";
         b2.innerHTML = "Ask Somebody Else";
-        b3.innerHTML = "Tell Cowroker To Clean";
+        b3.innerHTML = "Tell Coworker To Clean";
         b4.innerHTML = "Pretend You Didnt See";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "block";
-        b4.style.display = "none";
-        state="spillDrink";
+        b4.style.display = "block";
     }
+    
 
     function mopSpillYourself(){
         pic.src = "images/clean_man.png";
@@ -117,8 +117,46 @@
         b2.style.display = "none";
         b3.style.display = "none";
         b4.style.display = "none";
-        state = "mopSpillYourself"
+    }
 
+    function askSomebodyToHelp(){
+        pic.src = "images/krabstalking.png"
+        ptext1.innerHTML = "Your manager is glad you asked for help and is willing to help."
+        ptext2.innerHTML = "You and your manager start to conversate.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Continue";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function tellCoworkerToClean(){
+        pic.src = "images/krabstalking.png"
+        ptext1.innerHTML = "You lazily tell your Co-worker to clean the spill."
+        ptext2.innerHTML = "He looks at you in disgust, but still goes to clean the mess.";
+        ptext3.innerHTML = "As the Co-worker is cleaning, you head back to your Fry Station. You notice that the station is dirty";
+        ptext4.innerHTML = "What will you do?";
+        b1.innerHTML = "Clean the Station with water";
+        b2.innerHTML = "Spend an hour cleaning it the right way";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function pretendDidntSee(){
+        pic.src = "images/krabstalking.png"
+        ptext1.innerHTML = "You lazily tell your Co-worker to clean the spill."
+        ptext2.innerHTML = "He looks at you in disgust, but still goes to clean the mess.";
+        ptext3.innerHTML = "As the Co-worker is cleaning, you head back to your Fry Station. You notice that the station is dirty";
+        ptext4.innerHTML = "What will you do?";
+        b1.innerHTML = "Continue";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
     }
 
     //state Machine
@@ -128,30 +166,27 @@
                 spillDrink();
                 state = "spillDrink";
             }
-            else if(button == 2){
-                //Send them somewhere else
-            }
-            else if(button ==3){
-                //Send them somewhere else
-            }
         }
         else if(state == "spillDrink"){
             if(button == 1){
                 //Mop Spill Yourself
                 mopSpillYourself();
                 state = "mopSpillYourself";
-        }
+            }
             else if(button == 2){
-                //Ask Somebody Else
-
-        }
+                //Ask Somebody To Help
+                askSomebodyToHelp();
+                state = "askSomebodyToHelp";
+             }
             else if(button == 3){
                 //Tell Coworker To Clean
-
-        }
+                tellCoworkerToClean();
+                state = "tellCoworkerToClean";
+            }
             else if(button == 4){
                 //Pretend You Didn't See It
 
+            }
         }
         return false;
     }
