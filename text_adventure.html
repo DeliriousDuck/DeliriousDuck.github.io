@@ -107,14 +107,29 @@
     
 
     function mopSpillYourself(){
-        pic.src = "images/clean_man.png";
+        pic.src = "images/spongoboob.png";
         ptext1.innerHTML = "Your manager notices and thanks you for cleaning.";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
-        ptext4.innerHTML = "What would you like to do?";
-        b1.innerHTML = "Continue";
+        ptext4.innerHTML = "Ask if you can help out more?";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No, you're ready to go on a break";
         b1.style.display = "block";
-        b2.style.display = "none";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    function helpManager(){
+        pic.src = "images/spongoboob.png";
+        ptext1.innerHTML = "Your manager always comes to you to do his busywork. You are hardstuck as a frycook/manager's slave";
+        ptext2.innerHTML = "This is you position for the rest of the time the time that you work here.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "Ask if you can help out more?";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No, you're ready to go on a break";
+        b1.style.display = "block";
+        b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
     }
@@ -147,14 +162,14 @@
     }
 
     function pretendDidntSee(){
-        pic.src = "images/krabstalking.png"
-        ptext1.innerHTML = "You lazily tell your Co-worker to clean the spill."
-        ptext2.innerHTML = "He looks at you in disgust, but still goes to clean the mess.";
-        ptext3.innerHTML = "As the Co-worker is cleaning, you head back to your Fry Station. You notice that the station is dirty";
-        ptext4.innerHTML = "What will you do?";
-        b1.innerHTML = "Continue";
+        pic.src = "images/fallingjoe.png"
+        ptext1.innerHTML = "Your manager slips and falls on the spill and hurts himself."
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Take manager into the back for medical treatment.";
         b1.style.display = "block";
-        b2.style.display = "block";
+        b2.style.display = "none";
         b3.style.display = "none";
         b4.style.display = "none";
     }
@@ -177,7 +192,7 @@
                 //Ask Somebody To Help
                 askSomebodyToHelp();
                 state = "askSomebodyToHelp";
-             }
+            }
             else if(button == 3){
                 //Tell Coworker To Clean
                 tellCoworkerToClean();
@@ -185,8 +200,16 @@
             }
             else if(button == 4){
                 //Pretend You Didn't See It
-
+                pretendDidntSee();
+                state = "pretendDidntSee";
             }
+        else if(state == "mopSpillYourself"){
+            if(button == 1){
+                //Help Manager
+                helpManager();
+                state = "helpManager";
+            }
+        }
         }
         return false;
     }
