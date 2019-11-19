@@ -89,6 +89,7 @@
         b4.style.display = "none";
     }
 
+    //Beginning
     function spillDrink(){
         pic.src = "images/clean_man.png";
         ptext1.innerHTML = "You began your job as an employee of The Burger Place! On the first day of the job a customer has spilled a drink.";
@@ -102,10 +103,11 @@
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "block";
-        b4.style.display = "block";
+        b4.style.display = "block";           
     }
     
-
+    //Good route
+    //Route 1
     function mopSpillYourself(){
         pic.src = "images/spongoboob.png";
         ptext1.innerHTML = "Your manager notices and thanks you for cleaning.";
@@ -120,20 +122,66 @@
         b4.style.display = "none";
     }
 
+    //Ends, Link back to the intro ---- LOOK FOR DESOLATE SPONGEBOB
     function helpManager(){
-        pic.src = "images/spongoboob.png";
+        pic.src = "images/.png";
         ptext1.innerHTML = "Your manager always comes to you to do his busywork. You are hardstuck as a frycook/manager's slave";
-        ptext2.innerHTML = "This is you position for the rest of the time the time that you work here.";
+        ptext2.innerHTML = "This is your position for the rest of the time that you work here.";
         ptext3.innerHTML = "";
-        ptext4.innerHTML = "Ask if you can help out more?";
-        b1.innerHTML = "Yes";
-        b2.innerHTML = "No, you're ready to go on a break";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    
+    //Managers good side ---- LOOK FOR SPONGEBOB YAWNING AT PLANKTON
+    function breakTime(){
+        pic.src = "images/.png";
+        ptext1.innerHTML = "You enjoy your break and your manager is happy you did your job";
+        ptext2.innerHTML = "You continue to work diligently and eventually get offered a position as assistant to the manager";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Decline";
+        b2.innerHTML = "Accept";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
     }
 
+    //Prolongs the story
+     function declineAssistantPosition{
+        pic.src = "images/.png";
+        ptext1.innerHTML = "Your supervisor is impressed that you want to improve yourself a lot before becoming an assistant.";
+        ptext2.innerHTML = "You continue your job as a fry cook.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Keep grinding hard for that promotion!";
+        b2.innerHTML = "Have some fun on the job";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Link back to the intro
+    function acceptAssistantPosition{
+        pic.src = "images/.png";
+        ptext1.innerHTML = "You become the assistant manager and are stuck as the assistant manager for the rest of your career.";
+        ptext2.innerHTML = "You can not reach your goal of reaching manager status, so you believe that you life is ruined.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Either end immendiately or go down another path
+    //Route 2
     function askSomebodyToHelp(){
         pic.src = "images/krabstalking.png"
         ptext1.innerHTML = "Your manager is glad you asked for help and is willing to help."
@@ -146,7 +194,9 @@
         b3.style.display = "none";
         b4.style.display = "none";
     }
-
+    
+    //Long path to death, either way you die
+    //Route 3
     function tellCoworkerToClean(){
         pic.src = "images/krabstalking.png"
         ptext1.innerHTML = "You lazily tell your Co-worker to clean the spill."
@@ -160,7 +210,9 @@
         b3.style.display = "none";
         b4.style.display = "none";
     }
-
+    
+    //Sabotage route, either way you become the manager, the bad way
+    //Route 4
     function pretendDidntSee(){
         pic.src = "images/fallingjoe.png"
         ptext1.innerHTML = "Your manager slips and falls on the spill and hurts himself."
@@ -182,6 +234,7 @@
                 state = "spillDrink";
             }
         }
+        //INTRO
         else if(state == "spillDrink"){
             if(button == 1){
                 //Mop Spill Yourself
@@ -203,14 +256,33 @@
                 pretendDidntSee();
                 state = "pretendDidntSee";
             }
+        }
+        //ROUTE 1
         else if(state == "mopSpillYourself"){
             if(button == 1){
-                //Help Manager
+                //Help Manager, game ends
                 helpManager();
                 state = "helpManager";
             }
+            else if(button == 2){
+                //break time
+                breakTime();
+                state = "breakTime";
+            }
         }
+        else if(state == "breakTime"){
+            if(button == 1){
+                //Decline
+                declineAssistantPosition();
+                state = "declineAssistantPosition";
+            }
+            else if(button == 2){
+                //Accept
+                acceptAssistantPosition();
+                state = "acceptAssistantPosition";
+            }
         }
+        
         return false;
     }
 
