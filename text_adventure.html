@@ -124,7 +124,7 @@
 
     //Ends, Link back to the intro ---- LOOK FOR DESOLATE SPONGEBOB
     function helpManager(){
-        pic.src = "images/.png";
+        pic.src = "images/givinganell.png";
         ptext1.innerHTML = "Your manager always comes to you to do his busywork. You are hardstuck as a frycook/manager's slave";
         ptext2.innerHTML = "This is your position for the rest of the time that you work here.";
         ptext3.innerHTML = "";
@@ -152,7 +152,7 @@
     }
 
     //Prolongs the story
-     function declineAssistantPosition{
+     function declineAssistantPosition(){
         pic.src = "images/.png";
         ptext1.innerHTML = "Your supervisor is impressed that you want to improve yourself a lot before becoming an assistant.";
         ptext2.innerHTML = "You continue your job as a fry cook.";
@@ -166,8 +166,110 @@
         b4.style.display = "none";
     }
 
+    //Other path leads into another path kills the character
+    //Continues same path
+    function grindPromotion(){
+        pic.src = "images/.png";
+        ptext1.innerHTML = "Your manager trusts you very much and you guys help eachother out all the time.";
+        ptext2.innerHTML = "He has asked you to take care of his children.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to say?";
+        b1.innerHTML = "Sure, why not";
+        b2.innerHTML = "No, you're busy";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Avoids babysit, leads to good ending
+    function avoidBabysit(){
+        pic.src = "images/.png";
+        ptext1.innerHTML = "No worries. He says that he will find somebody else";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Continue";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Good or bad ending
+    function sickManager(){
+        pic.src = "images/.png";
+        ptext1.innerHTML = "Your manager is out sick and needs somebody to cover for him. He asks you if you are available.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to say?";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No, you're busy";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Best ending 
+    function greatestEnding(){
+        pic.src = "images/.png";
+        ptext1.innerHTML = "You do a great job and everybody who you worked with is very happy with your performance. Your manager decides it's time for you to get a promotion and you become the manager of The Burger Place!";
+        ptext2.innerHTML = "Great Job! You have beaten the game with the greatest ending possible!";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "Would you like to try out any of the other paths?";
+        b1.innerHTML = "Yes, Restart";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //CoWorker takes manager position
+    function coworkerStealsPosition(){
+         pic.src = "images/.png";
+        ptext1.innerHTML = "One of your fellow cooks covers for him and gets promoted because he did a great job. Your life spirals out of control because you are so sad, and you lose everything you have including your job at the Burger Place.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Ends Game, link to the intro
+    function badBabysit(){
+        pic.src = "images/givinganell.png";
+        ptext1.innerHTML = "You babysit his children and they destroy the house while you're in the bathroom. Your manager loses all happiness and commits suicide. You will never get promoted and you are now charged for second degree murder facing two life sentences with no parole.";
+        ptext2.innerHTML = " You contemplate what could have been the future of the two children you murdered and your final days of freedom as you whimper and sob in silence.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none"; 
+    }
+
+    //Leads into another path 
+    function haveFun(){
+        pic.src = "images/.png";
+        ptext1.innerHTML = "You decide to test out the fry station and cook a batch of fries.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "Would you like to eat the fries?";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
     //Link back to the intro
-    function acceptAssistantPosition{
+    function acceptAssistantPosition(){
         pic.src = "images/.png";
         ptext1.innerHTML = "You become the assistant manager and are stuck as the assistant manager for the rest of your career.";
         ptext2.innerHTML = "You can not reach your goal of reaching manager status, so you believe that you life is ruined.";
@@ -187,10 +289,40 @@
         ptext1.innerHTML = "Your manager is glad you asked for help and is willing to help."
         ptext2.innerHTML = "You and your manager start to conversate.";
         ptext3.innerHTML = "";
-        ptext4.innerHTML = "";
-        b1.innerHTML = "Continue";
+        ptext4.innerHTML = "What do you want to do?";
+        b1.innerHTML = "Talk about fantasy football";
+        b2.innerHTML = "Make small talk"
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //ENDS  
+    function fantasyEnd(){
+         pic.src = "images/givinganell.png"
+        ptext1.innerHTML = "Pull out your phone to show him your fantasy team."
+        ptext2.innerHTML = "He realises that your favorite team is the Patriots and you get fired for being a fan of the wrong team.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What do you want to do?";
+        b1.innerHTML = "Restart?";
         b1.style.display = "block";
         b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Continues with thw path
+    function smallTalk(){
+        pic.src = "images/krabstalking.png"
+        ptext1.innerHTML = "Your small talk becomes akward and you decide to go back to work."
+        ptext2.innerHTML = "You go back to the fry station and realise that it is dirty.";
+        ptext3.innerHTML = "You decide to clean it.";
+        ptext4.innerHTML = "How do you want to clean it?";
+        b1.innerHTML = "Clean the fry machine quickly with water";
+        b2.innerHTML = "Spend an hour cleaning it the right way"
+        b1.style.display = "block";
+        b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
     }
@@ -241,16 +373,19 @@
                 mopSpillYourself();
                 state = "mopSpillYourself";
             }
+            //ROUTE 2
             else if(button == 2){
                 //Ask Somebody To Help
                 askSomebodyToHelp();
                 state = "askSomebodyToHelp";
             }
+            //ROUTE 3
             else if(button == 3){
                 //Tell Coworker To Clean
                 tellCoworkerToClean();
                 state = "tellCoworkerToClean";
             }
+            //ROUTE 4
             else if(button == 4){
                 //Pretend You Didn't See It
                 pretendDidntSee();
@@ -282,10 +417,111 @@
                 state = "acceptAssistantPosition";
             }
         }
-        
+        else if(state == "acceptAssistantPosition"){
+            if(button == 1){
+                //Back to the intro
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "helpManager"){
+            if(button == 1){
+                //Back to the intro
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "declineAssistantPosition"){
+            if(button == 1){
+                //Grind for promotion
+                grindPromotion();
+                state = "grindPromotion";
+            }
+            else if(button == 2){
+                //Leads into Route 2
+                haveFun();
+                state = "haveFun";
+            }
+        }
+        else if(state == "grindPromotion"){
+            if(button == 1){
+                //Ending
+                badBabysit();
+                state = "badBabysit";
+            }
+            else if(button == 2){
+                //Avoid babysit
+                avoidBabysit();
+                state = "avoidBabysit";
+            }
+        }
+        else if(state == "badBabysit"){
+            if(button == 1){
+                //Goes back to the intro
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "avoidBabysit"){
+            if(button == 1){
+                //Leads into sick manager
+                sickManager();
+                state = "sickManager"
+            }
+        }
+        else if(state == "sickManager"){
+            if(button == 1){
+                //Best ending the player can get
+                greatestEnding();
+                state = "greatestEnding";
+            }
+            else if(button == 2){
+                //CoWorker takes manager spot
+                coworkerStealsPosition();
+                state = "coworkerStealsPosition";
+            }
+        }
+        else if(state == "greatestEnding"){
+            if(button == 1){
+                //Player got the best ending, linking back to the intro
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "coworkerStealsPosition"){
+            if(button == 1){
+                //Player missed out on the best ending, link back to the intro
+                //END OF ROUTE 1
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "askSomebodyElse"){
+            if(button == 1){
+                //Fantasy Football ending
+                fantasyEnd();
+                state = "fantasyEnd";
+            }
+            else if(button == 2){
+                //Continues with the path
+                smallTalk();
+                state = "smallTalk";
+            }
+        }
+        else if(state == "fantasyEnd"){
+            if(button == 1){
+                //Leads into intro
+                intro();
+                state = "intro";
+            }
+        }
         return false;
     }
 
 </script>
 </body>
 </html>
+<!-- git add .
+     git commit -m ""
+     git push -u origin master 
+-->
