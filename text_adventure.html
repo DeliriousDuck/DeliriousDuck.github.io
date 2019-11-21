@@ -107,7 +107,7 @@
     }
     
     //Good route
-    //Route 1
+    //Route 1//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function mopSpillYourself(){
         pic.src = "images/spongoboob.png";
         ptext1.innerHTML = "Your manager notices and thanks you for cleaning.";
@@ -283,7 +283,7 @@
     }
 
     //Either end immendiately or go down another path
-    //Route 2
+    //Route 2///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function askSomebodyToHelp(){
         pic.src = "images/krabstalking.png"
         ptext1.innerHTML = "Your manager is glad you asked for help and is willing to help."
@@ -314,7 +314,7 @@
 
     //Continues with thw path
     function smallTalk(){
-        pic.src = "images/krabstalking.png"
+        pic.src = "images/.png"
         ptext1.innerHTML = "Your small talk becomes akward and you decide to go back to work."
         ptext2.innerHTML = "You go back to the fry station and realise that it is dirty.";
         ptext3.innerHTML = "You decide to clean it.";
@@ -326,9 +326,85 @@
         b3.style.display = "none";
         b4.style.display = "none";
     }
+
+    //ENDS 
+    function cleanWithWater(){
+        pic.src = "images/givinganell.png"
+        ptext1.innerHTML = "The fry machine explodes and kills you."
+        ptext2.innerHTML = "You have flashbacks about your life and realise that you should've cleaned it the right way. ";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What do you want to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Continues with the path
+    function cleanRightWay(){
+        pic.src = "images/.png"
+        ptext1.innerHTML = "After you clean the station you decide to test out the fry station and cook a batch of fries."
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "Eat the fries?";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No"
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Could lead to ending
+    function eatRestOfFries(){
+        pic.src = "images/.png"
+        ptext1.innerHTML = "You do not get caught"
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "Eat the rest of the fries?";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No"
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Either ENDS or continues
+    function ateAllFries(){
+        pic.src = "images/.png"
+        ptext1.innerHTML = "You get fired because the manager catches you devouring all the fries."
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Doesnt get caught either way
+    function dontGetCaught(){
+        pic.src = "images/.png"
+        ptext1.innerHTML = "You are still seen as a respectable worker."
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "Should you get more fries in the freezer?";
+        b1.innerHTML = "No";
+        b2.innerHTML = "Yes"
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //
+
     
     //Long path to death, either way you die
-    //Route 3
+    //Route 3///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function tellCoworkerToClean(){
         pic.src = "images/krabstalking.png"
         ptext1.innerHTML = "You lazily tell your Co-worker to clean the spill."
@@ -344,7 +420,7 @@
     }
     
     //Sabotage route, either way you become the manager, the bad way
-    //Route 4
+    //Route 4//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function pretendDidntSee(){
         pic.src = "images/fallingjoe.png"
         ptext1.innerHTML = "Your manager slips and falls on the spill and hurts himself."
@@ -491,12 +567,13 @@
         else if(state == "coworkerStealsPosition"){
             if(button == 1){
                 //Player missed out on the best ending, link back to the intro
-                //END OF ROUTE 1
+                //END OF ROUTE 1/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 intro();
                 state = "intro";
             }
         }
-        else if(state == "askSomebodyElse"){
+        //ROUTE 2
+        else if(state == "askSomebodyToHelp"){
             if(button == 1){
                 //Fantasy Football ending
                 fantasyEnd();
@@ -511,6 +588,56 @@
         else if(state == "fantasyEnd"){
             if(button == 1){
                 //Leads into intro
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "smallTalk"){
+            if(button == 1){
+                //ENDS 
+                cleanWithWater();
+                state = "cleanWithWater";
+            }
+            else if(button == 2){
+                //Continues down the path
+                cleanRightWay();
+                state = "cleanRightWay";
+            }
+        }
+        else if(state == "cleanWithWater"){
+            if(button == 1){
+                //Links back to the intro, you explode
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "cleanRightWay"){
+            if(button == 1){
+                //Could lead to a bad ending
+                eatRestOfFries();
+                state = "eatRestOfFries";
+            }
+            else if(button == 2){
+                //Dont get caught eating fries
+                dontGetCaught();
+                state = "dontGetCaught";
+            }
+        }
+        else if(state == "eatRestOfFries"){
+            if(button == 1){
+                //Leads into an ending
+                ateAllFries();
+                state = "ateAllFries";
+            }
+            else if(button == 2){
+                //Escapes ending
+                dontGetCaught();
+                state = "dontGetCaught"; 
+            }
+        }
+        else if(state == "ateAllFries"){
+            if(button == 1){
+                //ENDS Links back into the intro
                 intro();
                 state = "intro";
             }
