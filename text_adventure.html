@@ -227,7 +227,7 @@
 
     //CoWorker takes manager position
     function coworkerStealsPosition(){
-         pic.src = "images/.png";
+         pic.src = "images/givinganell.png";
         ptext1.innerHTML = "One of your fellow cooks covers for him and gets promoted because he did a great job. Your life spirals out of control because you are so sad, and you lose everything you have including your job at the Burger Place.";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
@@ -243,7 +243,7 @@
     function badBabysit(){
         pic.src = "images/givinganell.png";
         ptext1.innerHTML = "You babysit his children and they destroy the house while you're in the bathroom. Your manager loses all happiness and commits suicide. You will never get promoted and you are now charged for second degree murder facing two life sentences with no parole.";
-        ptext2.innerHTML = " You contemplate what could have been the future of the two children you murdered and your final days of freedom as you whimper and sob in silence.";
+        ptext2.innerHTML = "You contemplate what could have been the future of the two children you murdered and your final days of freedom as you whimper and sob in silence.";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "What would you like to do?";
         b1.innerHTML = "Restart?";
@@ -270,7 +270,7 @@
 
     //Link back to the intro
     function acceptAssistantPosition(){
-        pic.src = "images/.png";
+        pic.src = "images/givinganell.png";
         ptext1.innerHTML = "You become the assistant manager and are stuck as the assistant manager for the rest of your career.";
         ptext2.innerHTML = "You can not reach your goal of reaching manager status, so you believe that you life is ruined.";
         ptext3.innerHTML = "";
@@ -286,7 +286,7 @@
     //Route 2///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function askSomebodyToHelp(){
         pic.src = "images/krabstalking.png"
-        ptext1.innerHTML = "Your manager is glad you asked for help and is willing to help."
+        ptext1.innerHTML = "Your manager is glad you asked for help and is willing to help.";
         ptext2.innerHTML = "You and your manager start to conversate.";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "What do you want to do?";
@@ -301,7 +301,7 @@
     //ENDS  
     function fantasyEnd(){
          pic.src = "images/givinganell.png"
-        ptext1.innerHTML = "Pull out your phone to show him your fantasy team."
+        ptext1.innerHTML = "Pull out your phone to show him your fantasy team.";
         ptext2.innerHTML = "He realises that your favorite team is the Patriots and you get fired for being a fan of the wrong team.";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "What do you want to do?";
@@ -315,7 +315,7 @@
     //Continues with thw path
     function smallTalk(){
         pic.src = "images/.png"
-        ptext1.innerHTML = "Your small talk becomes akward and you decide to go back to work."
+        ptext1.innerHTML = "Your small talk becomes akward and you decide to go back to work.";
         ptext2.innerHTML = "You go back to the fry station and realise that it is dirty.";
         ptext3.innerHTML = "You decide to clean it.";
         ptext4.innerHTML = "How do you want to clean it?";
@@ -330,7 +330,7 @@
     //ENDS 
     function cleanWithWater(){
         pic.src = "images/givinganell.png"
-        ptext1.innerHTML = "The fry machine explodes and kills you."
+        ptext1.innerHTML = "The fry machine explodes and kills you.";
         ptext2.innerHTML = "You have flashbacks about your life and realise that you should've cleaned it the right way. ";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "What do you want to do?";
@@ -344,7 +344,7 @@
     //Continues with the path
     function cleanRightWay(){
         pic.src = "images/.png"
-        ptext1.innerHTML = "After you clean the station you decide to test out the fry station and cook a batch of fries."
+        ptext1.innerHTML = "After you clean the station you decide to test out the fry station and cook a batch of fries.";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "Eat the fries?";
@@ -359,7 +359,7 @@
     //Could lead to ending
     function eatRestOfFries(){
         pic.src = "images/.png"
-        ptext1.innerHTML = "You do not get caught"
+        ptext1.innerHTML = "You do not get caught";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "Eat the rest of the fries?";
@@ -373,8 +373,8 @@
 
     //Either ENDS or continues
     function ateAllFries(){
-        pic.src = "images/.png"
-        ptext1.innerHTML = "You get fired because the manager catches you devouring all the fries."
+        pic.src = "images/givinganell.png"
+        ptext1.innerHTML = "You get fired because the manager catches you devouring all the fries.";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "What would you like to do?";
@@ -388,20 +388,89 @@
     //Doesnt get caught either way
     function dontGetCaught(){
         pic.src = "images/.png"
-        ptext1.innerHTML = "You are still seen as a respectable worker."
+        ptext1.innerHTML = "You are still seen as a respectable worker.";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "Should you get more fries in the freezer?";
         b1.innerHTML = "No";
-        b2.innerHTML = "Yes"
+        b2.innerHTML = "Yes";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
     }
 
-    //
+    //Doesn't get more fries in the freezer
+    //ENDS
+    function noGetFries(){
+        pic.src = "images/givinganell.png"
+        ptext1.innerHTML = "You get fired because you were supposed to make more fries, today was national fry day.";
+        ptext2.innerHTML = "You have no more desire to work anywhere anymore and you become a shut-in.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
 
+    //Leads into the freezer either way the player dies
+    function freezerBegin(){
+        pic.src = "images/.png"
+        ptext1.innerHTML = "You enter the freezer and annoying CoWorker Karen accidentally closes the freezer as you are inside and you are locked in.";
+        ptext2.innerHTML = "While you are inside, looking for an escape, you spot some of the frozen fries.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "Eat the frozen fries?";
+        b1.innerHTML = "Yes";
+        b2.innerHTML = "No";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //ENDS Dies from frostbite
+    function dieFrostbite(){
+        pic.src = "images/givinganell.png"
+        ptext1.innerHTML = "The fries froze the inside of your body and you die from frostbite.";
+        ptext2.innerHTML = "Karen finds your body and hides it so that there is no evidence.";
+        ptext3.innerHTML = "Nobody even knew about your existence a week later.";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //Stays stuck in the freezer
+    function stayStuck(){
+        pic.src = "images/.png"
+        ptext1.innerHTML = "You don't die from frostbite but you are still stuck in the freezer. You continue to look for a way out.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Continue";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //ENDS Die inside the freezer nonetheless
+    function freezerEnd(){
+        pic.src = "images/givinganell.png"
+        ptext1.innerHTML = "Though all of the attempts, you still die from being frozen and your cause of death was reported to the news, making your reputation deminish even after death.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Restart?";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
     
     //Long path to death, either way you die
     //Route 3///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -426,10 +495,25 @@
         ptext1.innerHTML = "Your manager slips and falls on the spill and hurts himself."
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
-        ptext4.innerHTML = "";
-        b1.innerHTML = "Take manager into the back for medical treatment.";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Continue";
         b1.style.display = "block";
         b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
+    //ENDS with rat poison
+    function ratPoison(){
+        pic.src = "images/fallingjoe.png"
+        ptext1.innerHTML = "Take manager into the back for medical treatment."
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Give him rat poison disguised as the new promotional dipping sauce";
+        b2.innerHTML = "Give him medicine to help with the pain and call the E.R.";
+        b1.style.display = "block";
+        b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
     }
@@ -466,6 +550,12 @@
                 //Pretend You Didn't See It
                 pretendDidntSee();
                 state = "pretendDidntSee";
+            }
+        }
+        else if(state == "pretendDidntSee"){
+            if(button == 1){
+                //ENDING Path
+                
             }
         }
         //ROUTE 1
@@ -592,6 +682,16 @@
                 state = "intro";
             }
         }
+        else if(state == "tellCoworkerToClean"){
+            if(button == 1){
+                cleanWithWater();
+                state = "cleanWithWater";
+            }
+            else if(button == 2){
+                cleanRightWay();
+                state = "cleanRightWay";
+            }
+        }
         else if(state == "smallTalk"){
             if(button == 1){
                 //ENDS 
@@ -638,6 +738,57 @@
         else if(state == "ateAllFries"){
             if(button == 1){
                 //ENDS Links back into the intro
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "dontGetCaught"){
+            if(button == 1){
+                //ENDS Lead back into the intro
+                noGetFries();
+                state = "noGetFries";
+            }
+            else if(button == 2){
+                //Leads into the freezer
+                freezerBegin();
+                state = "freezerBegin";
+            }
+        }
+        else if(state == "noGetFries"){
+            if(button == 1){
+                //Lead back into the intro
+                intro();
+                state = "intro";
+            }
+        }
+        else if(state == "freezerBegin"){
+            if(button == 1){
+                //Die from frostbite
+                dieFrostbite();
+                state = "dieFrostbite";
+            }
+            else if(button == 2){
+                //Continue with the freezer
+                stayStuck();
+                state = "stayStuck";
+            }
+        }
+        else if(state == "dieFrostbite"){
+            //Leads back into the intro
+            intro();
+            state = "intro";
+        }
+        else if(state == "stayStuck"){
+            if(button == 1){
+                //Stay in the freezer
+                freezerEnd();
+                state = "freezerEnd";
+            }
+        }
+        else if(state == "freezerEnd"){
+            if(button == 1){
+                //Links back to the intro
+                //END OF ROUTE 3 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 intro();
                 state = "intro";
             }
