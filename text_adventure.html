@@ -506,17 +506,31 @@
     //ENDS with rat poison
     function ratPoison(){
         pic.src = "images/fallingjoe.png"
-        ptext1.innerHTML = "Take manager into the back for medical treatment."
+        ptext1.innerHTML = "The manager dies and you become the new manager ."
         ptext2.innerHTML = "";
-        ptext3.innerHTML = "";
-        ptext4.innerHTML = "What would you like to do?";
-        b1.innerHTML = "Give him rat poison disguised as the new promotional dipping sauce";
-        b2.innerHTML = "Give him medicine to help with the pain and call the E.R.";
+        ptext3.innerHTML = "Congratulations! You became the new manager!";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Try our other paths?";
         b1.style.display = "block";
-        b2.style.display = "block";
+        b2.style.display = "none";
         b3.style.display = "none";
         b4.style.display = "none";
     }
+
+    //GIving the manager medicine 
+    function medicine(){
+        pic.src = "images/fallingjoe.png"
+        ptext1.innerHTML = "The manager goes to the E.R. and you become the new manager as a replacement.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "What would you like to do?";
+        b1.innerHTML = "Continue";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+
 
     //state Machine
     function bclick(button){
@@ -555,7 +569,19 @@
         else if(state == "pretendDidntSee"){
             if(button == 1){
                 //ENDING Path
-                
+                ratPoison();
+                state = "ratPoison";
+            }
+            else if(button == 2){
+                //Continues same path
+                medicine();
+                state = "medicine";
+            }
+        }
+        else if(state == "ratPoison"){
+            if(button == 1){
+                intro();
+                state = "intro";
             }
         }
         //ROUTE 1
