@@ -30,19 +30,150 @@
         <h1>Hangman Game</h1>
 
 
-        <div id="container">
-            <div id="leftpane">
+        <style>
+        body {
+            overflow: hidden;
+        }
+
+        #container {
+            position: absolute;
+            top: 70px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: purple;
+        }
+
+        #leftpane {
+            width: 56%;
+            height: 100%;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #rightpane {
+            width: 44%;
+            height: 100%;
+            float: left;
+        }
+
+        #buttons {
+            position: absolute;
+            bottom: 50px;
+            left: 56%;
+            right: 0px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #button {
+            bottom: 50px;
+            left: 56%;
+            right: 0px;
+            height: 50px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: blue;
+            color: black;
+        }
+
+        .btn {
+            margin: 40px;
+        }
+
+
+        #storytext {
+            position: absolute;
+            bottom: 50px;
+            top: 0px;
+            left: 56%;
+            right: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #replitvid {
+            max-height: 97%;
+            max-width: 97%;
+            width: 97%;
+        }
+
+        #ptext1 {
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #ptext2 {
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #ptext3 {
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #ptext4 {
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+
+        <div id="leftpane">
+            <video id="replitvid" width="" height="" controls>
+                        <source src="hangman.mp4" type="video/mp4">
+                        
+                    </video>
+        </div>
+
+        <div id="rightpane">
+            <div id="storytext">
+                <table>
+                    <tr>
+                        <th>
+                            <p id="ptext1">Python Game: Hangman</p>
+                            <p id="ptext2">This will explain the difficulties that Casey Shearan and I had during the making of our Hangman Game.
+                            </p>
+                            <p id="ptext3">We had some problems when it came to getting a huge variety of words into the word pool and having the program choose a random word and use it. I chose to fix this problem.
+                            The first thing that I did was put some words into a word pool named "wordList" and searched online onto how to get the words from the word list called.
+                            I got the answer from a site called PYnative and it told me that this function chose any word from my list and applied it.</p>
+                            
+                            <p id="ptext4">The other problem was that we needed to display the letters on the blank spaces and keep them there if the player 
+                            guess a letter wrong. To fix this Casey had to create a new for loop function that if the player got the letter right would display the letter
+                            and and keep it on the line and if they got it wrong would still do the same thing.</p>
+                        </th>
+                    </tr>
+                </table>
             </div>
 
-            <div id="rightpane">
+            <div id="buttons">
+                <a type="button" id="button" href="https://repl.it/@ChaseCuccia/Hangman-Project?lite=true">Click to play game,</a>
             </div>
+
         </div>
+
+    </div>
+
+</body>
+
+</html>
         
-        <div id= "container">
-        <div id="rightpane">
-                <div id="story-text">
-                <p id="ptext1">
-                    explain the difficulties onto how  this project was made and how you fixed them
-        <iframe height="400px" width="50%" src="https://repl.it/@ChaseCuccia/Hangman-Project?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </body>
 </html>

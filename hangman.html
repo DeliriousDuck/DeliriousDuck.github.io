@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    
+</head>
+
+<body>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li class="dropdown">
+            <div class="active">Projects</div>
+            <ul class="dropdown-content">
+                <li><a href="text_adventure.html">Text Adventure</a></li>
+                <li><a href="project2.html">Python Project</a></li>
+                <li><a href="project3.html">Project 3</a></li>
+            </ul>
+
+        </li>
+
+        <li><a href="contactme.html">Contact Me</a></li>
+
+    </ul>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        #container {
+            position: absolute;
+            top: 70px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: orange;
+            }
+
+        #leftpane {
+            width: 56%;
+            height: 100%;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #rightpane {
+            width: 44%;
+            height: 100%;
+            float: left;
+        }
+
+        #buttons {
+            position: absolute;
+            bottom: 50px;
+            left: 56%;
+            right: 0px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #button {
+            bottom: 50px;
+            left: 56%;
+            right: 0px;
+            height: 50px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            color: black;
+        }
+
+        .btn {
+            margin: 40px;
+        }
+
+
+        #storytext {
+            position: absolute;
+            bottom: 50px;
+            top: 0px;
+            left: 56%;
+            right: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #replitvid {
+            max-height: 97%;
+            max-width: 97%;
+            width: 97%;
+        }
+
+        #ptext1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #ptext2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #ptext3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #ptext4 {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+     <div id="container">
+
+
+        <div id="leftpane">
+            <iframe height="400px" width="100%" src="https://repl.it/@ChaseCuccia/Hangman-Project?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" 
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        </div>
